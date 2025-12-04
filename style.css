@@ -1,0 +1,82 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00e1ff;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* HOME SECTION */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.home span {
+    color: #00e1ff;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00e1ff;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 80px 60px;
+}
+
+/* PROJECT CARDS */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
