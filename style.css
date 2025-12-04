@@ -7,36 +7,46 @@
 }
 
 body {
-    background: #0f0f0f;
+    background: #0e0e0e;
     color: #fff;
     overflow-x: hidden;
+}
+
+.blue {
+    color: #00e1ff;
 }
 
 /* NAVBAR */
 header {
     position: fixed;
+    top: 0;
     width: 100%;
-    padding: 20px 60px;
+    padding: 18px 60px;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(12px);
     z-index: 1000;
 }
 
 .logo {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
     color: #00e1ff;
     text-decoration: none;
 }
 
-nav a {
+#nav-menu a {
     margin-left: 20px;
+    font-size: 15px;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    transition: 0.3s;
+}
+
+#nav-menu a:hover {
+    color: #00e1ff;
 }
 
 #hamburger {
@@ -45,14 +55,14 @@ nav a {
     cursor: pointer;
 }
 
-/* HERO SECTION */
+/* HERO */
 .home {
     height: 100vh;
     padding: 0 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: url("images/hero.jpg") no-repeat center/cover;
+    background: url("images/hero.jpg") center/cover no-repeat;
     position: relative;
 }
 
@@ -62,24 +72,17 @@ nav a {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.55);
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
 }
 
-.home .content {
+.home-content {
     position: relative;
-    max-width: 500px;
     z-index: 10;
+    max-width: 500px;
 }
 
 .home h1 {
     font-size: 48px;
-    line-height: 1.2;
-}
-
-.home span {
-    color: #00e1ff;
-    font-weight: 700;
 }
 
 .typing {
@@ -89,33 +92,52 @@ nav a {
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 28px;
+    margin-top: 20px;
     background: #00e1ff;
+    padding: 12px 28px;
     color: black;
-    border-radius: 6px;
     font-weight: 600;
+    border-radius: 6px;
     text-decoration: none;
 }
 
-/* PROFILE IMAGE */
 .profile-img {
-    width: 280px;
+    width: 300px;
     border-radius: 50%;
     border: 4px solid #00e1ff;
     box-shadow: 0 0 25px #00e1ff;
-    position: relative;
     z-index: 10;
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 section {
     padding: 100px 60px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 20px;
+}
+
+/* EXPERIENCE */
+.exp-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #00e1ff;
+}
+
+.exp-card h3 {
+    color: #00e1ff;
+}
+
+.exp-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.exp-card ul li {
+    margin-bottom: 8px;
 }
 
 /* SKILLS */
@@ -125,34 +147,50 @@ h2 {
     gap: 12px;
 }
 
-.skill-box p {
-    padding: 10px 20px;
+.skill-box span {
     background: #1e1e1e;
+    padding: 10px 18px;
     border-radius: 6px;
 }
 
 /* PROJECTS */
-.project-list {
-    margin-top: 30px;
+.project-grid {
+    margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
-.project {
-    background: #1b1b1b;
+.project-card {
+    background: #1a1a1a;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
+    transition: 0.3s;
 }
 
-.project img {
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #00e1ff33;
+}
+
+.project-card img {
     width: 100%;
     border-radius: 8px;
 }
 
-.project h3 {
-    margin: 12px 0;
+/* EDUCATION TIMELINE */
+.timeline {
+    border-left: 3px solid #00e1ff;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+}
+
+.timeline-item h3 {
+    color: #00e1ff;
 }
 
 /* CONTACT FORM */
@@ -163,39 +201,33 @@ h2 {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    margin: 10px 0;
     padding: 12px;
-    background: #1e1e1e;
+    margin-bottom: 12px;
+    background: #1a1a1a;
     border: none;
     border-radius: 6px;
     color: #fff;
 }
 
-.contact-form textarea {
-    height: 120px;
-    resize: none;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-
     header {
-        padding: 20px;
+        padding: 18px 20px;
     }
 
-    nav {
+    #nav-menu {
         display: none;
         position: absolute;
+        background: #000;
         right: 20px;
         top: 70px;
-        background: #000;
         padding: 20px;
         border-radius: 8px;
         flex-direction: column;
     }
 
-    nav a {
-        margin: 10px 0;
+    #nav-menu a {
+        margin: 12px 0;
     }
 
     #hamburger {
@@ -209,8 +241,8 @@ h2 {
     }
 
     .profile-img {
-        margin-top: 40px;
-        width: 200px;
+        margin-top: 35px;
+        width: 220px;
     }
 
     section {
