@@ -3,16 +3,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     background: #0e0e0e;
-    color: #fff;
+    color: white;
     overflow-x: hidden;
 }
 
-.blue {
+/* GLOBAL */
+.accent {
+    color: #00e1ff;
+}
+
+section {
+    padding: 100px 60px;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
     color: #00e1ff;
 }
 
@@ -23,24 +34,24 @@ header {
     width: 100%;
     padding: 18px 60px;
     background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .logo {
+    color: #00e1ff;
     font-size: 26px;
     font-weight: 700;
-    color: #00e1ff;
     text-decoration: none;
 }
 
 #nav-menu a {
     margin-left: 20px;
+    color: white;
     font-size: 15px;
-    color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -60,33 +71,16 @@ header {
     height: 100vh;
     padding: 0 60px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: url("images/hero.jpg") center/cover no-repeat;
-    position: relative;
+    align-items: center;
 }
 
-.home::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    top: 0; left: 0;
-}
-
-.home-content {
-    position: relative;
-    z-index: 10;
-    max-width: 500px;
-}
-
-.home h1 {
-    font-size: 48px;
+.hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
 .typing {
-    margin-top: 10px;
     font-size: 22px;
 }
 
@@ -94,29 +88,25 @@ header {
     display: inline-block;
     margin-top: 20px;
     background: #00e1ff;
-    padding: 12px 28px;
+    padding: 12px 25px;
     color: black;
     font-weight: 600;
     border-radius: 6px;
     text-decoration: none;
 }
 
-.profile-img {
+/* HERO IMAGE */
+.hero-img {
     width: 300px;
     border-radius: 50%;
     border: 4px solid #00e1ff;
     box-shadow: 0 0 25px #00e1ff;
-    z-index: 10;
 }
 
-/* SECTIONS */
-section {
-    padding: 100px 60px;
-}
-
-h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
+/* ABOUT */
+.about p {
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 /* EXPERIENCE */
@@ -129,14 +119,15 @@ h2 {
 
 .exp-card h3 {
     color: #00e1ff;
+    margin-bottom: 5px;
 }
 
 .exp-card ul {
-    margin-top: 15px;
+    margin-top: 12px;
     padding-left: 20px;
 }
 
-.exp-card ul li {
+.exp-card li {
     margin-bottom: 8px;
 }
 
@@ -148,8 +139,8 @@ h2 {
 }
 
 .skill-box span {
-    background: #1e1e1e;
-    padding: 10px 18px;
+    background: #1b1b1b;
+    padding: 10px 16px;
     border-radius: 6px;
 }
 
@@ -165,13 +156,13 @@ h2 {
     background: #1a1a1a;
     padding: 15px;
     border-radius: 10px;
-    text-align: center;
     transition: 0.3s;
+    text-align: center;
 }
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 20px #00e1ff33;
+    box-shadow: 0 0 20px #00e1ff55;
 }
 
 .project-card img {
@@ -181,8 +172,8 @@ h2 {
 
 /* EDUCATION TIMELINE */
 .timeline {
-    border-left: 3px solid #00e1ff;
     padding-left: 25px;
+    border-left: 3px solid #00e1ff;
 }
 
 .timeline-item {
@@ -203,24 +194,30 @@ h2 {
     width: 100%;
     padding: 12px;
     margin-bottom: 12px;
-    background: #1a1a1a;
+    background: #1b1b1b;
     border: none;
+    color: white;
     border-radius: 6px;
-    color: #fff;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
     header {
         padding: 18px 20px;
+    }
+
+    /* MOBILE MENU */
+    #hamburger {
+        display: block;
     }
 
     #nav-menu {
         display: none;
         position: absolute;
-        background: #000;
         right: 20px;
         top: 70px;
+        background: #000;
         padding: 20px;
         border-radius: 8px;
         flex-direction: column;
@@ -230,19 +227,14 @@ h2 {
         margin: 12px 0;
     }
 
-    #hamburger {
-        display: block;
-    }
-
     .home {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
     }
 
-    .profile-img {
-        margin-top: 35px;
-        width: 220px;
+    .hero-img {
+        margin-top: 30px;
+        width: 230px;
     }
 
     section {
