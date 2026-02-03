@@ -58,9 +58,19 @@ header {
     color: #00eaff;
 }
 
+#nav-menu a:focus-visible {
+    color: #00eaff;
+    outline: 2px solid #00eaff;
+    outline-offset: 4px;
+}
+
 #hamburger {
     display: none;
     font-size: 28px;
+    background: transparent;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -92,6 +102,11 @@ header {
     text-decoration: none;
 }
 
+.btn:focus-visible {
+    outline: 2px solid #00eaff;
+    outline-offset: 4px;
+}
+
 .btn-outline {
     margin-left: 10px;
     padding: 11px 25px;
@@ -99,6 +114,17 @@ header {
     border-radius: 6px;
     color: #00eaff;
     text-decoration: none;
+}
+
+.btn-outline:focus-visible {
+    outline: 2px solid #00eaff;
+    outline-offset: 4px;
+}
+
+#hamburger:focus-visible {
+    border-color: #00eaff;
+    outline: 2px solid #00eaff;
+    outline-offset: 4px;
 }
 
 /* HERO IMAGE */

@@ -21,5 +21,7 @@ const menu = document.getElementById("nav-menu");
 const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+    menu.style.display = isExpanded ? "none" : "flex";
+    hamburger.setAttribute("aria-expanded", String(!isExpanded));
 });
