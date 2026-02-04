@@ -91,6 +91,12 @@ header {
     margin-top: 10px;
 }
 
+.cv-meta {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #b5b5b5;
+}
+
 .btn {
     display: inline-block;
     margin-top: 25px;
@@ -139,6 +145,17 @@ header {
 .about p {
     font-size: 18px;
     line-height: 1.7;
+}
+
+.highlights {
+    margin-top: 18px;
+    padding-left: 20px;
+    color: #d5d5d5;
+    line-height: 1.6;
+}
+
+.highlights li + li {
+    margin-top: 8px;
 }
 
 /* SKILLS */
@@ -197,6 +214,17 @@ header {
     color: white;
     border-radius: 6px;
     margin-bottom: 12px;
+}
+
+.form-status {
+    min-height: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #00eaff;
+}
+
+.form-status.is-error {
+    color: #ff6b6b;
 }
 
 /* RESPONSIVE DESIGN */
