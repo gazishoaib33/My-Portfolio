@@ -28,7 +28,9 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <div id="hamburger">☰</div>
+        <button id="hamburger" type="button" aria-expanded="false" aria-controls="nav-menu">
+            ☰
+        </button>
     </header>
 
     <!-- HERO SECTION -->
@@ -39,6 +41,7 @@
 
             <a href="#contact" class="btn">Contact Me</a>
             <a href="CV_Gazi_Shoaib.pdf" class="btn-outline" download>Download CV</a>
+            <p class="cv-meta">PDF • 1.1 KB • Updated Feb 2026</p>
         </div>
 
         <div class="hero-right" data-aos="zoom-in">
@@ -51,10 +54,16 @@
     <section id="about" class="about" data-aos="fade-up">
         <h2>About Me</h2>
         <p>
-            I am an R&D Engineer with experience in documentation, requirement analysis,
-            NLP experiment pipelines, dashboards, reporting, and team collaboration.
-            I enjoy breaking down problems, analyzing information clearly, and designing logical solutions.
+            I am an R&amp;D Engineer and data-focused problem solver with hands-on experience in
+            requirement analysis, technical documentation, NLP experimentation, dashboards, and reporting.
+            I enjoy turning ambiguous business needs into structured plans and practical solutions that teams can
+            implement confidently.
         </p>
+        <ul class="highlights">
+            <li>3+ years working across data analysis, NLP experiments, and reporting.</li>
+            <li>Built dashboards and KPI reporting for cross-functional stakeholders.</li>
+            <li>Strong focus on clear documentation and requirements alignment.</li>
+        </ul>
     </section>
 
     <!-- SKILLS -->
@@ -129,11 +138,12 @@
     <section id="contact" class="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
 
-        <form class="contact-form" action="https://formspree.io/f/xqkveqdy" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqkveqdy" method="POST">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="message" placeholder="Your message..." required></textarea>
             <button class="btn" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
     </section>
 

@@ -23,3 +23,25 @@ This project is built using:
 - *(Add more if you have other tools or libraries)*
 
 ## 📁 Project Structure
+```
+.
+├── CV_Gazi_Shoaib.pdf
+├── images/
+│   └── (profile image assets)
+├── index.html
+├── script.js
+└── style.css
+```
+
+## ▶️ Run Locally
+Because this is a static site, you can open `index.html` directly in your browser,
+or run a local server to avoid CORS restrictions for assets.
+
+### Option 1: Open directly
+1. Double-click `index.html` to open it in your browser.
+
+### Option 2: Run a local server (recommended)
+```bash
+python3 -m http.server 8000
+```
+Then visit `http://localhost:8000` in your browser.
