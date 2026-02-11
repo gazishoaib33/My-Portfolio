@@ -97,6 +97,30 @@ header {
     color: #b5b5b5;
 }
 
+
+.hero-subtitle {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #d6faff;
+    font-style: italic;
+}
+
+.hero-contact {
+    margin-top: 12px;
+    max-width: 700px;
+    color: #c7c7c7;
+    line-height: 1.7;
+}
+
+.hero-contact a {
+    color: #00eaff;
+    text-decoration: none;
+}
+
+.hero-contact a:hover {
+    text-decoration: underline;
+}
+
 .btn {
     display: inline-block;
     margin-top: 25px;
@@ -256,6 +280,12 @@ header {
     .home {
         flex-direction: column;
         text-align: center;
+        gap: 24px;
+    }
+
+    .hero-contact {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .profile-img {

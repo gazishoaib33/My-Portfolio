@@ -1,9 +1,9 @@
 // Typing effect
 const roles = [
-    "R&D Engineer",
     "Data Analyst",
-    "NLP Learner",
-    "Tech Enthusiast"
+    "Machine Learning Practitioner",
+    "NLP Practitioner",
+    "Applied Statistics Enthusiast"
 ];
 
 let index = 0;
