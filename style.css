@@ -9,6 +9,7 @@
 body {
     background: #0d0d0d;
     color: white;
+    line-height: 1.6;
 }
 
 section {
@@ -56,6 +57,16 @@ header {
 
 #nav-menu a:hover {
     color: #00eaff;
+}
+
+#nav-menu a:focus-visible,
+.project-more:focus-visible,
+.btn-link:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 2px solid #00eaff;
+    outline-offset: 3px;
 }
 
 #nav-menu a:focus-visible {
@@ -208,11 +219,70 @@ header {
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    border: 1px solid #2a2a2a;
 }
 
 .project-card:hover {
     box-shadow: 0 0 20px #00eaff66;
     transform: translateY(-6px);
+}
+
+.project-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #1b1b1b;
+    color: #d3d3d3;
+    border: 1px solid #3a3a3a;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.filter-btn.is-active,
+.filter-btn:hover {
+    background: #00eaff22;
+    color: #00eaff;
+    border-color: #00eaff88;
+}
+
+.repo-stats {
+    margin-top: 10px;
+    color: #c3c3c3;
+    font-size: 14px;
+}
+
+.btn-link {
+    margin-top: 12px;
+    background: transparent;
+    border: 0;
+    color: #00eaff;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.card-stack {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.quote-card {
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.quote-card h3 {
+    margin-top: 12px;
+    color: #00eaff;
+    font-size: 15px;
 }
 
 /* EDUCATION */
@@ -234,7 +304,7 @@ header {
     width: 100%;
     padding: 12px;
     background: #1b1b1b;
-    border: none;
+    border: 1px solid #333;
     color: white;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -249,6 +319,84 @@ header {
 
 .form-status.is-error {
     color: #ff6b6b;
+}
+
+.contact-form .is-invalid {
+    border-color: #ff6b6b;
+}
+
+.terminal-box {
+    background: #101010;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 16px;
+    max-width: 680px;
+}
+
+.terminal-box code {
+    color: #00eaff;
+}
+
+#terminal-input {
+    width: 100%;
+    margin-top: 8px;
+    background: #1a1a1a;
+    border: 1px solid #363636;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.terminal-output {
+    margin-top: 12px;
+    color: #b7d9de;
+    min-height: 24px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    width: min(92vw, 540px);
+    background: #121212;
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 22px;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* RESPONSIVE DESIGN */

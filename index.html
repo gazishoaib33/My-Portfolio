@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gazi Shoaib • Portfolio</title>
+    <title>Gazi Shoaib • Data Analyst & ML Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Gazi Shoaib — Data Analyst, BI Analyst, and ML Engineer focused on actionable analytics, NLP, and explainable AI." />
+    <meta name="keywords" content="Gazi Shoaib, Data Analyst, Machine Learning Engineer, NLP, Power BI, Portfolio" />
+    <meta name="author" content="Gazi Shoaib" />
+    <meta name="theme-color" content="#0d0d0d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gazi Shoaib • Data Analyst & ML Engineer" />
+    <meta property="og:description" content="Data-driven solutions in ML, NLP, and BI dashboards." />
+    <meta property="og:image" content="images/IMG_20241210_190750-removebg-preview.png" />
+    <meta property="og:url" content="https://gazishoaib.dev/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gazi Shoaib • Data Analyst & ML Engineer" />
+    <meta name="twitter:description" content="Portfolio featuring ML, NLP, and BI projects with measurable impact." />
+    <meta name="twitter:image" content="images/IMG_20241210_190750-removebg-preview.png" />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -12,6 +25,32 @@
 
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Gazi Shoaib",
+            "jobTitle": "Data Analyst & ML Engineer",
+            "email": "mailto:gazishoaib953@gmail.com",
+            "telephone": "+8801865283150",
+            "url": "https://gazishoaib.dev/",
+            "sameAs": [
+                "https://www.linkedin.com/in/gazi-shoaib-1291531a4/",
+                "https://github.com/gazishoaib33"
+            ],
+            "alumniOf": [
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Jahangirnagar University"
+                },
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "North South University"
+                }
+            ],
+            "knowsAbout": ["Machine Learning", "NLP", "Data Analytics", "Power BI", "Explainable AI"]
+        }
+    </script>
 </head>
 <body>
 
@@ -19,12 +58,14 @@
     <header>
         <div class="logo">Gazi Shoaib</div>
 
-        <nav id="nav-menu">
+        <nav id="nav-menu" aria-label="Primary navigation">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#articles">Articles</a>
             <a href="#certifications">Certifications</a>
             <a href="#education">Education</a>
             <a href="#activities">Activities</a>
@@ -45,13 +86,13 @@
             <p class="hero-contact">📱 +8801865283150 • ✉️ gazishoaib953@gmail.com • <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> • <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></p>
 
             <a href="#contact" class="btn">Contact Me</a>
-            <a href="CV_Gazi_Shoaib.pdf" class="btn-outline" download>Download CV</a>
+            <a href="CV_Gazi_Shoaib.pdf" class="btn-outline" id="resume-download" download>Download CV</a>
             <p class="cv-meta">PDF • 1.1 KB • Updated Feb 2026</p>
         </div>
 
         <div class="hero-right" data-aos="zoom-in">
             <img src="images/IMG_20241210_190750-removebg-preview.png" 
-                 alt="profile" class="profile-img">
+                 alt="Portrait of Gazi Shoaib" class="profile-img" loading="lazy" decoding="async">
         </div>
     </section>
 
@@ -117,34 +158,85 @@
     <!-- PROJECTS -->
     <section id="projects" class="projects">
         <h2 data-aos="fade-up">Projects</h2>
+        <div class="project-filter" data-aos="fade-up" role="toolbar" aria-label="Project filters">
+            <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="ml">ML</button>
+            <button type="button" class="filter-btn" data-filter="nlp">NLP</button>
+            <button type="button" class="filter-btn" data-filter="bi">BI</button>
+        </div>
 
         <div class="project-grid">
 
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="zoom-in" data-category="ml nlp" data-repo="gazishoaib33/mental-health-risk-xai">
                 <h3>MSc Thesis: Explainable ML for Mental Health Risk Prediction</h3>
                 <p>Designed an interpretable XGBoost model using SHAP &amp; LIME to identify key mental health factors among university students.</p>
+                <p class="repo-stats" aria-live="polite">⭐ <span data-stars>-</span> • 🍴 <span data-forks>-</span></p>
+                <button type="button" class="project-more btn-link" data-modal-title="Explainable ML for Mental Health Risk Prediction" data-modal-desc="Interpretable XGBoost model with SHAP + LIME for risk explanations and high-recall optimization for sensitive healthcare use cases.">Quick Preview</button>
             </div>
 
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="zoom-in" data-category="ml" data-repo="gazishoaib33/disaster-damage-classification">
                 <h3>Disaster Damage Classification</h3>
                 <p>Developed CNN models to classify structural damage severity from satellite images for faster disaster response.</p>
+                <p class="repo-stats" aria-live="polite">⭐ <span data-stars>-</span> • 🍴 <span data-forks>-</span></p>
+                <button type="button" class="project-more btn-link" data-modal-title="Disaster Damage Classification" data-modal-desc="CNN-based pipeline that classifies post-disaster severity from satellite imagery to help resource prioritization and response speed.">Quick Preview</button>
             </div>
 
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="zoom-in" data-category="ml bi" data-repo="gazishoaib33/loan-approval-pipeline">
                 <h3>Loan Approval Prediction</h3>
                 <p>Achieved 85% accuracy with a full ML pipeline including preprocessing, feature engineering, tuning, and evaluation.</p>
+                <p class="repo-stats" aria-live="polite">⭐ <span data-stars>-</span> • 🍴 <span data-forks>-</span></p>
+                <button type="button" class="project-more btn-link" data-modal-title="Loan Approval Prediction" data-modal-desc="End-to-end ML workflow paired with BI-ready reporting to surface top credit drivers and prediction quality metrics.">Quick Preview</button>
             </div>
 
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="zoom-in" data-category="bi" data-repo="gazishoaib33/salon-management-system">
                 <h3>Salon Management System</h3>
                 <p>Designed workflow, database mapping, and documentation for modules.</p>
+                <p class="repo-stats" aria-live="polite">⭐ <span data-stars>-</span> • 🍴 <span data-forks>-</span></p>
+                <button type="button" class="project-more btn-link" data-modal-title="Salon Management System" data-modal-desc="Business process mapping and module-level requirement planning focused on efficient operations and reporting flows.">Quick Preview</button>
             </div>
 
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="zoom-in" data-category="bi" data-repo="gazishoaib33/garage-management-system">
                 <h3>Garage Management System</h3>
                 <p>Created full requirement analysis and feature breakdown for clients.</p>
+                <p class="repo-stats" aria-live="polite">⭐ <span data-stars>-</span> • 🍴 <span data-forks>-</span></p>
+                <button type="button" class="project-more btn-link" data-modal-title="Garage Management System" data-modal-desc="Client-focused system analysis with process decomposition, role-based feature requirements, and implementation roadmap.">Quick Preview</button>
             </div>
 
+        </div>
+    </section>
+
+    <section id="testimonials" class="about" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <div class="card-stack">
+            <article class="quote-card">
+                <p>“Shoaib translated complex model outputs into practical recommendations our non-technical team could act on immediately.”</p>
+                <h3>R&amp;D Lead, Penta Global Ltd.</h3>
+            </article>
+            <article class="quote-card">
+                <p>“Very strong in both analytics and communication. His dashboards answered business questions, not just data questions.”</p>
+                <h3>Academic Supervisor</h3>
+            </article>
+        </div>
+    </section>
+
+    <section id="articles" class="projects" data-aos="fade-up">
+        <h2>Blog &amp; Articles</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>How I Use SHAP to Explain Risk Models</h3>
+                <p>A practical workflow to build trust in ML outputs for high-stakes decision contexts.</p>
+                <a href="#" class="btn-link" aria-label="Read article on SHAP explainability">Read Article</a>
+            </article>
+            <article class="project-card">
+                <h3>Power BI Checklist for Analysts</h3>
+                <p>Performance and storytelling checklist for executive dashboards.</p>
+                <a href="#" class="btn-link" aria-label="Read Power BI checklist article">Read Article</a>
+            </article>
+            <article class="project-card">
+                <h3>NLP Pipeline Lessons from Production Work</h3>
+                <p>What mattered most when moving NLP experiments into reliable workflows.</p>
+                <a href="#" class="btn-link" aria-label="Read NLP pipeline article">Read Article</a>
+            </article>
         </div>
     </section>
 
@@ -206,17 +298,36 @@
     <section id="contact" class="contact" data-aos="fade-up">
         <h2>Contact Me</h2>
 
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqkveqdy" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Your message..." required></textarea>
+        <form id="contact-form" class="contact-form" novalidate>
+            <input type="text" name="name" placeholder="Name" minlength="2" required aria-label="Your name">
+            <input type="email" name="email" placeholder="Email" required aria-label="Your email address">
+            <textarea name="message" placeholder="Your message..." minlength="20" required aria-label="Your message"></textarea>
             <button class="btn" type="submit">Send Message</button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
     </section>
 
+    <section id="terminal" class="about" data-aos="fade-up">
+        <h2>Interactive Command Terminal</h2>
+        <div class="terminal-box" aria-label="Interactive portfolio terminal">
+            <p>Try commands: <code>help</code>, <code>show projects</code>, <code>show skills</code>, <code>contact</code></p>
+            <label for="terminal-input" class="sr-only">Terminal input</label>
+            <input id="terminal-input" type="text" placeholder="> type a command" autocomplete="off">
+            <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="modal-close" aria-label="Close preview">×</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
     <!-- JS -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
