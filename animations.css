@@ -1,0 +1,176 @@
+/* ============================================================
+   animations.css — add to your <head> AFTER style.css
+   <link rel="stylesheet" href="animations.css">
+   ============================================================ */
+
+/* ── Nav transition ──────────────────────────────────────── */
+nav, header {
+  transition: transform 0.35s ease, background 0.35s ease,
+              box-shadow 0.35s ease, backdrop-filter 0.35s ease !important;
+}
+
+/* ── Reveal base state (JS sets opacity/transform per-element) */
+[data-reveal-done] {
+  will-change: opacity, transform;
+}
+
+/* ── Project card tilt ───────────────────────────────────── */
+.project-card,
+.project-item,
+article.project {
+  will-change: transform;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* ── Amber underline on nav hover ────────────────────────── */
+nav a {
+  position: relative;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #f0a500;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after { width: 100%; }
+
+/* ── CTA button pulse ────────────────────────────────────── */
+@keyframes btn-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240, 165, 0, 0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(240, 165, 0, 0);  }
+}
+
+.hero a:first-of-type,
+a.btn-primary,
+.cta-primary {
+  animation: btn-pulse 2.8s ease-in-out infinite;
+}
+
+/* ── Hero name highlight shimmer ─────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+h1 em,
+.hero h1 em,
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #f0a500 0%,
+    #ffd060 40%,
+    #f0a500 60%,
+    #b87d00 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3.5s linear infinite;
+}
+
+/* ── Availability badge pulse ────────────────────────────── */
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; transform: scale(1);   }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+.availability-dot,
+.status-dot,
+[class*="available"] span:first-child {
+  display: inline-block;
+  animation: status-pulse 1.8s ease-in-out infinite;
+}
+
+/* ── Section number fade+slide ───────────────────────────── */
+@keyframes num-in {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.project-number,
+.project-index,
+[class*="proj-num"] {
+  animation: num-in 0.5s ease forwards;
+}
+
+/* ── Skill tag hover lift ─────────────────────────────────── */
+.skill-group span,
+.skills-category span,
+.tech-tag,
+.skill-tag {
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+  display: inline-block;
+}
+
+.skill-group span:hover,
+.skills-category span:hover,
+.tech-tag:hover,
+.skill-tag:hover {
+  transform: translateY(-2px) scale(1.04);
+  color: #f0a500 !important;
+}
+
+/* ── Contact card hover ──────────────────────────────────── */
+.contact-card,
+.contact-item,
+[class*="contact"] a {
+  transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.contact-card:hover,
+.contact-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(240, 165, 0, 0.4) !important;
+}
+
+/* ── Image float animation ───────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.hero img,
+.profile-image,
+.hero-image img {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ── Stat numbers entrance ───────────────────────────────── */
+@keyframes count-in {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.stat-number,
+.stat-value,
+[class*="stat"] .number {
+  animation: count-in 0.5s ease forwards;
+}
+
+/* ── Timeline dot pulse ──────────────────────────────────── */
+@keyframes timeline-pulse {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(240, 165, 0, 0.5); }
+  50%       { box-shadow: 0 0 0 6px rgba(240, 165, 0, 0);  }
+}
+
+.timeline-dot,
+.experience-dot,
+[class*="timeline"] span:first-child {
+  animation: timeline-pulse 2s ease-in-out infinite;
+}
+
+/* ── Reduced motion respect ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
